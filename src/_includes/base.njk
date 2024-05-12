@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="" dir="">
+<html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
   <head>
     {% include 'partials/title-styles-and-meta.njk' %}
-    {# <link rel="canonical" href="{{ meta.url }}{{ page.url }}" /> #}
+    
 
   </head>
 
   <body>
-    {% include "header.njk" %}
+    {% include "partials/header.njk" %}
     <main>
       <h1>{{ title }}</h1>
       {{ content | safe }}
