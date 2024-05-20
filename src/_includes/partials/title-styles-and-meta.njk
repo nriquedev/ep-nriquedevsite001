@@ -3,6 +3,31 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <meta name="description" content="{{ description }}" />
 
+
+<link
+  rel="alternate"
+  hreflang="x-default"
+  href="{{ meta.url }}{{ page.url | locale_url('en') }}"
+/>
+
+    {# {% for link in page.url | locale_links %}
+    <link
+      rel="alternate"
+      hreflang="{{ link.lang }}"
+      href="{{ meta.url }}{{ link.url }}"
+    />
+    {% endfor %} #}
+
+
+
+{% if page.url === '/' %}
+  <meta http-equiv="refresh" content="1; URL='{{ page.url | locale_url }}' ">
+{% endif %}
+
+
+
+{# <meta http-equiv="refresh" content="0; URL=https://www.jestemrique.net/"> #}
+
 <link rel="canonical" href="{{ meta.url }}{{ page.url }}" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,5 +41,5 @@
 
 
 
-<title>{{title}}</title>
+<title>{{title}} URL: {{page.url }}</title>
 
