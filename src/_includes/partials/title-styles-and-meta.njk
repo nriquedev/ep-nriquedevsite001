@@ -1,7 +1,8 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<meta name="description" content="{{ description }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{title}} URL: {{page.url }}</title>
 
 
 <link
@@ -10,25 +11,12 @@
   href="{{ meta.url }}{{ page.url | locale_url('en') }}"
 />
 
-    {# {% for link in page.url | locale_links %}
-    <link
-      rel="alternate"
-      hreflang="{{ link.lang }}"
-      href="{{ meta.url }}{{ link.url }}"
-    />
-    {% endfor %} #}
-
-
-
 {% if page.url === '/' %}
   <meta http-equiv="refresh" content="1; URL='{{ page.url | locale_url }}' ">
 {% endif %}
 
-
-
-{# <meta http-equiv="refresh" content="0; URL=https://www.jestemrique.net/"> #}
-
 <link rel="canonical" href="{{ meta.url }}{{ page.url }}" />
+<meta name="description" content="{{ description }}" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,5 +29,5 @@
 
 
 
-<title>{{title}} URL: {{page.url }}</title>
+
 
