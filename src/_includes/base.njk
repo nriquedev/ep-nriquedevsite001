@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
+  <head>
+    {% include 'partials/title-styles-and-meta.njk' %}
+    
+
+  </head>
+
+  <body>
+    {% include "partials/header.njk" %}
+    <main>
+      <h1>{{ title }}</h1>
+      {{ content | safe }}
+    </main>
+    {% include "partials/footer.njk" %}
+
+
+      hola
+      {{ page.permalink }}
+
+  </body>
+</html>
