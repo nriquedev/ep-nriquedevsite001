@@ -1,4 +1,19 @@
-<nav class="nav 
+      <nav>
+    <ul>
+      {% for item in navigation[page.lang] %}
+      <li>
+        <a href="{{ item.url }}">{{ item.text }}</a>
+      </li>
+      {% endfor %}
+      <li>
+        <a href="https://github.com/Jestemrique">GitHub</a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+{# <nav class="nav 
             flex-md-column
             inconsolata
             ">
@@ -13,4 +28,4 @@
         
         </a>
     {%- endfor -%}
-</nav>
+</nav> #}
