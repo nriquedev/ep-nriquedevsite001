@@ -2,44 +2,10 @@
             flex-md-column
             inconsolata
             ">
-    <ul>
       {% for item in navigation[page.lang] %}
-      {# <li> #}
-        {# <a href="{{ item.url }}">{{ item.text }}</a> #}
-
-        <a class="  nav-link 
-                    " 
-            href="{{ item.url }}"> 
-              
-            {{ item.text }}
-        
+        <a class="nav-link" href="{{ item.url }}"> 
+          {{ item.text }}
         </a>
-
-
-
-      {# </li> #}
       {% endfor %}
-      <li>
-        <a href="https://github.com/Jestemrique">GitHub</a>
-      </li>
-    </ul>
+
   </nav>
-
-
-
-{# <nav class="nav 
-            flex-md-column
-            inconsolata
-            ">
-    {%- for sitepage in collections.pages -%}
-        <a class="  nav-link 
-                    {% if  (page.url | lower | slug == "") and (sitepage.data.title | lower == "home") %}ep-nav-item-active{% endif %}    
-                    {% if  page.url | lower | slug == sitepage.data.title | lower %}ep-nav-item-active{% endif %}
-                    " 
-            href="{{ sitepage.url }}"> 
-              
-            {{ sitepage.data.title }}
-        
-        </a>
-    {%- endfor -%}
-</nav> #}

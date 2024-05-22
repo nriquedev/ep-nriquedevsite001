@@ -43,7 +43,11 @@
             <h2 class="h1 border-bottom" >{{ title | safe }} </h2>
           </div>
           
-          {{ content | safe }}
+          {# {{ content | safe }} #}
+
+          {% block main_content %}
+            {# {{ content | safe }} #}
+          {% endblock %}
 
 
         </div>
